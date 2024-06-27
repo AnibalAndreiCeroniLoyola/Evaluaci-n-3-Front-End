@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO PASAJEROS</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+</head>
+
+<body class="bg-light">
+    <main class="container-fluid">
+        <div class="row">
+            <form class="form">
+                <p class="title">REGISTRO PASAJEROS</p>
+
+                    <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" id="run" name="run" onblur="verificar(this.id)">
+                        <span>RUN</span>
+                    </label>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" id="asiento" name="asiento" onblur="verificar(this.id)">
+                        <span>ASIENTO</span>
+                    </label>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" id="anden" name="anden" onblur="verificar(this.id)">
+                        <span>ANDEN</span>
+                    </label>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" id="servicio" name="servicio" onblur="verificar(this.id)">
+                        <span>SERVICIO</span>
+                    </label>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" id="boleto" name="boleto" onblur="verificar(this.id)">
+                        <span>BOLETO</span>
+                    </label>
+                </div>  
+                <label>
+                    <input required="" placeholder="" type="text" class="input" id="nombre" name="nombre" onblur="verificar(this.id)">
+                    <span>NOMBRE PASAJERO</span>
+                </label>  
+                <label>
+                    <input required="" placeholder="" type="date" class="input" id="fechaCompra" name="fechaCompra" onblur="verificar(this.id)">
+                    <span></span>
+                </label>
+                <input type="reset" value="LIMPIAR" class="btn btn-info" onclick="limpiar()" style="background-color:rgba(53, 53, 53, 0.893); border: none; color:white">
+                <input type="button" id="btnGuardar" value="INGRESAR" class="btn btn-success" style="background-color:#4169E1; border: none;">
+            </form>
+
+            <div class="col-12 mt-4">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>RUN</th>
+                                <th>ASIENTO</th>
+                                <th>ANDEN</th>
+                                <th>SERVICIO</th>
+                                <th>BOLETO</th>
+                                <th>NOMBRE PASAJERO</th>
+                                <th>FECHA</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="utilidades.js"></script>
+    <script src="funciones.js" type="module"></script>
+</body>
+</html>
